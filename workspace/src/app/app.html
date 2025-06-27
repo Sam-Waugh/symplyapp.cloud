@@ -1,0 +1,65 @@
+<div class="coming-soon-container">
+  <div class="background-animation"></div>
+  
+  <div class="content">
+    <div class="logo-section">
+      <img src="SymplyAllergyname&icon.png" alt="SymplyAllergy Logo" class="brand-logo">
+      <div class="tagline">Allergy Management Made Simple</div>
+    </div>
+    
+    <div class="main-content">
+      <h2 class="coming-soon-title">Coming Soon</h2>
+      <p class="description">
+        We're building the future of allergy management. A comprehensive app to help you 
+        track allergens, manage symptoms, and live confidently with food allergies.
+      </p>
+      
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🛡️</div>
+          <div class="feature-text">Safe Dining</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <div class="feature-text">Smart Tracking</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">👥</div>
+          <div class="feature-text">Community Support</div>
+        </div>
+      </div>
+      
+      <div class="signup-section">
+        <h3>Be the first to know when we launch</h3>
+        <form class="email-form" (ngSubmit)="onSubmit()" #emailForm="ngForm">
+          <div class="input-group">
+            <input 
+              type="email" 
+              [(ngModel)]="email" 
+              name="email"
+              placeholder="Enter your email address"
+              required
+              #emailInput="ngModel"
+              class="email-input"
+            >
+            <button type="submit" [disabled]="!emailForm.form.valid" class="notify-btn">
+              Notify Me
+            </button>
+          </div>
+          <div *ngIf="isSubmitted" class="success-message">
+            Thank you! We'll notify you when SymplyAllergy launches.
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <p>&copy; 2025 SymplyAllergy. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+        <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+        <a href="#" aria-label="Contact us">Contact</a>
+      </div>
+    </footer>
+  </div>
+</div>
