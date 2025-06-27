@@ -4,16 +4,13 @@
   <meta charset="utf-8">
   <title>SymplyAllergy - Coming Soon</title>
   <script>
-    // GitHub Pages 404 redirect for Single Page Applications
-    // This script takes the current url and converts the path and query
-    // string into just a query string, and then redirects the browser
-    // to the new url with the path as a query string parameter.
-    var pathPrefix = '/symplyapp.cloud/';
-    if (location.pathname.slice(0, pathPrefix.length) === pathPrefix) {
-      var path = location.pathname.slice(pathPrefix.length);
+    // GitHub Pages 404 redirect for Single Page Applications with custom domain
+    // This script redirects to the home page and preserves the path for Angular routing
+    var path = location.pathname;
+    if (path !== '/') {
       sessionStorage.redirect = path;
     }
-    location.replace(location.origin + pathPrefix);
+    location.replace(location.origin + '/');
   </script>
 </head>
 <body>
