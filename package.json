@@ -5,11 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href /symplyapp.cloud/",
+    "build:prod": "ng build --configuration production --base-href /",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:symply-coming-soon": "node dist/symply-coming-soon/server/server.mjs",
-    "deploy": "ng build --configuration production --base-href /symplyapp.cloud/ && npx angular-cli-ghpages --dir=dist/symply-coming-soon/browser"
+    "deploy": "ng build --configuration production --base-href / && npx angular-cli-ghpages --dir=dist/symply-coming-soon/browser"
   },
   "prettier": {
     "overrides": [
